@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "srd-memorial",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

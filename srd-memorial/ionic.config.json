@@ -1,0 +1,7 @@
+{
+  "name": "srd-memorial",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
