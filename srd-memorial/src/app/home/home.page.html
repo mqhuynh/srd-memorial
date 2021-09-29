@@ -1,18 +1,36 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class= "ion-no-border"> 
   <ion-toolbar>
-    <ion-title> Home </ion-title>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="end" name="grid-outline"></ion-icon>
+      </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon name="person"></ion-icon>
+        </ion-button>
+        </ion-buttons>
+    <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon slot="start" name="search"></ion-icon>
+    </ion-button>
+    </ion-buttons> 
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Home</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Home page</strong>
-  </div>
-
-
+  <ion-segment scrollable value="1"> 
+    <ion-segment-button value="1">
+      <ion-label>Home</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2">
+      <ion-label>News</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="3">
+      <ion-label>Events</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="4">
+      <ion-label>Veterans</ion-label>
+    </ion-segment-button>
+  </ion-segment> 
+</ion-content>
