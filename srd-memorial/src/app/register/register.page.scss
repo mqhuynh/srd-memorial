@@ -1,25 +1,25 @@
 .register-form {
   margin: 0 35%;
   padding-top: 1cm;
-  border-style:solid;
-  border-color: whitesmoke;
-  border-radius: 0.5cm;
+  margin-top: 3cm;
 }
 @media (max-width: 922px) {
   .register-form {
     margin: unset;
   }
-
 }
 
 .Register {
   margin: 0 43%;
-  //padding-top: 1cm;
-
 }
 @media (max-width: 922px) {
   .register-form {
     margin: unset;
   }
+}
 
+ion-title {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
 }
