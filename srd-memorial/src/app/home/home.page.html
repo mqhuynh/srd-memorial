@@ -1,25 +1,36 @@
-<ion-header [translucent]="true" class= "ion-no-border"> 
+<ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button>
         <ion-icon slot="end" name="grid-outline"></ion-icon>
       </ion-button>
-      </ion-buttons>
-      <ion-buttons slot="end">
-        <ion-button>
-          <ion-icon name="person"></ion-icon>
-        </ion-button>
-        </ion-buttons>
+      <p>Memorial</p>
+      <ion-button>
+        <ion-icon slot="end" name="grid-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon
+          slot="start"
+          name="search"
+          aria-placeholder="search "
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-buttons slot="end">
-    <ion-button>
-      <ion-icon slot="start" name="search"></ion-icon>
-    </ion-button>
-    </ion-buttons> 
+      <ion-button>
+        <ion-icon name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button expand="block" shape="round" (click)="logout()"
+        >Logout</ion-button
+      >
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-segment scrollable value="1"> 
+  <ion-segment scrollable value="1">
     <ion-segment-button value="1">
       <ion-label>Home</ion-label>
     </ion-segment-button>
@@ -32,5 +43,6 @@
     <ion-segment-button value="4">
       <ion-label>Veterans</ion-label>
     </ion-segment-button>
-  </ion-segment> 
+  </ion-segment>
+  <h3>Login as : {{user? user.userEmail:""}}</h3>
 </ion-content>
