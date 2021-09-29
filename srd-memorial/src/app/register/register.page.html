@@ -3,8 +3,8 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <form class= "Register">
-    <ion-title>Registration Form</ion-title>
+    <form class="Register">
+      <ion-title>Registration Form</ion-title>
     </form>
   </ion-toolbar>
 </ion-header>
@@ -13,31 +13,54 @@
   <form class="register-form">
     <ion-item lines="full">
       <ion-label position="floating">First name</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="firstname"
+        name="firstname"
+      ></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Last name</ion-label>
-      <ion-input type="text" required></ion-input>
-      </ion-item>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="lastname"
+        name="lastname"
+      ></ion-input>
+    </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input
+        required
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+      ></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input
+        required
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+      ></ion-input>
     </ion-item>
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit"  expand="block">Sign Up</ion-button>
+        <ion-button
+          type="submit"
+          expand="block"
+          shape="round"
+          (click)="register()"
+          >Sign Up</ion-button
+        >
       </ion-col>
     </ion-row>
   </form>
 </ion-content>
-
-
-
