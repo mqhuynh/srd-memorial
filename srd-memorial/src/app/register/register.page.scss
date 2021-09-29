@@ -1,0 +1,10 @@
+.register-form {
+  margin: 0 25%;
+  padding-top: 0.5cm;
+}
+@media (max-width: 600px) {
+  .register-form {
+    margin: unset;
+  }
+
+}
