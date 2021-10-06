@@ -56,7 +56,7 @@ export class AuthService {
            this.afauth.signOut();
          }else{
            loading.dismiss();
-           this.router.navigate(['/home']);
+           this.router.navigate(['/menu']);
          }
        })
        .catch(error=>{

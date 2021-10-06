@@ -1,0 +1,25 @@
+@media (min-width: 768px) {
+  ion-router-outlet {
+    margin-top: 63px;
+  }
+}
+
+@media (max-width: 768px) {
+  ion-router-outlet {
+    margin-top: 56px;
+  }
+}
+.active-item {
+  color: #26316d;
+  font-weight: 500;
+}
+ion-title.large-title {
+  font-size: 15px;
+}
+ion-content {
+  --padding-top: 20px;
+}
+ion-button {
+  margin-top: 5vh;
+  margin-left: 5vw;
+}
