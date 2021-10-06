@@ -1,0 +1,34 @@
+<ion-menu contentId="main" menuId="myMenu" side="start">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img src="../../../assets/logo.png" height="110px" />
+          </ion-col>
+          <ion-col style="padding-top: 60px">
+            <i>Hello, {{user? user.userFirstname:""}}</i>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-menu-toggle *ngFor="let item of menuItems">
+      <ion-item
+        fill="clear"
+        button
+        (click)="setTitle(item.title)"
+        [routerLink]="item.path"
+        routerDirection="root"
+        routerLinkActive="active-item"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
+        {{ item.title }}
+      </ion-item>
+    </ion-menu-toggle>
+    <ion-button color="light" (click)="logout()">LOGOUT</ion-button>
+  </ion-content>
+</ion-menu>
+<app-header></app-header>
+<ion-router-outlet id="main"></ion-router-outlet>
