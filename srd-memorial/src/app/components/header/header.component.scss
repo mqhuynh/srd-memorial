@@ -1,0 +1,31 @@
+@media (min-width: 768px) {
+  .mobile-header {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    background: #26316d;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-header {
+    display: block;
+  }
+
+  .header {
+    display: none;
+  }
+}
+
+.active-item {
+  background: #26316d;
+  transition: background-color 2s ease-out 100ms;
+  border-bottom: 1px solid white;
+}
+.active-item:hover {
+  background-color: #8995d6;
+}
