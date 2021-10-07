@@ -1,3 +1,12 @@
-
+ion-footer {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  position: relative;
+  --ion-background-color: #26316d !important;
+  transition: background-color 4s ease-out 400ms;
+}
+ion-footer:hover {
+  --ion-background-color: #8995d6 !important;
+}
 
 
