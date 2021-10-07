@@ -1,12 +1,29 @@
-<ion-content style="--padding-top: 40px"> Home page works </ion-content>
-
-
-
+<ion-content>
+  <ion-slides [options]="option">
+    <ion-slide>
+      <ion-card>
+        <img src="../../assets/flower.jpg" />
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <img src="../../assets/clement.jpg" />
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <img src="../../assets/wish.jpg" />
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
 <ion-footer class="ion-no-border" style="text-align: center">
   <ion-toolbar style="color: white">
     <ion-title>Copyright @2021 by CDCS</ion-title>
-    <ion-subtitle
-      >For the Further information, please contact Dr.Minh Huynh</ion-subtitle
+    <ion-card-subtitle
+      ><i
+        >For the Further information, please contact Dr.Minh Huynh</i
+      ></ion-card-subtitle
     >
   </ion-toolbar>
 </ion-footer>

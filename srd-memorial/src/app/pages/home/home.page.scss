@@ -1,12 +1,38 @@
+ion-card {
+  width: 100%;
+  height: 550px;
+  box-shadow: none;
+  border-radius: 12px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    transform: scale(1.1, 1.1) rotate(1deg);
+    transition: 600ms all ease-in-out;
+  }
+}
+
+.swiper-slide-active {
+  transform: scale(1.05, 1.05);
+
+  ion-card {
+    img {
+      transform: scale(1, 1);
+    }
+  }
+}
+
+.swiper-slide {
+  transition: 1000ms all ease-in-out;
+}
+
 ion-footer {
   margin-bottom: 0;
   padding-bottom: 0;
   position: relative;
   --ion-background-color: #26316d !important;
-  transition: background-color 4s ease-out 400ms;
-}
-ion-footer:hover {
-  --ion-background-color: #8995d6 !important;
 }
 
-
+ion-toolbar:hover {
+  --ion-background-color: #444d81 !important;
+}
