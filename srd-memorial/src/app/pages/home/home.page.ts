@@ -12,6 +12,13 @@ import { AuthService } from '../../services/auth.service';
 })
 export class HomePage implements OnInit {
 user:any;
+option = {
+  slidesPerView: 1,
+  centeredSlides: true,
+  loop: true,
+  spaceBetween: 5,
+  autoplay:true,
+}
   constructor(private auth: AuthService) {}
   ngOnInit() {
     this.auth.user$.subscribe(user=>{

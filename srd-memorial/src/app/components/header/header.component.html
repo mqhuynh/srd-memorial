@@ -10,7 +10,12 @@
 <ion-header style="flex: auto; height: max-content">
   <ion-row class="header ion-align-items-center">
     <ion-col size="4" class="ion-align-items-center">
-      <img src="../../../assets/logo.png" width="110px" height="85px" />
+      <img
+        src="../../../assets/logo.png"
+        width="95px"
+        height="90px"
+        style="border-radius: 50%"
+      />
     </ion-col>
     <ion-col size="7" class="ion-text-left">
       <ion-button
@@ -53,8 +58,13 @@
       </ion-button>
     </ion-col>
     <ion-col size="1" class="ion-text-right">
-      <ion-button fill="clear" style="color: #fff" (click)="logout()">
-        LogOut
+      <ion-button
+        class="logout"
+        fill="clear"
+        style="color: #fff"
+        (click)="logout()"
+      >
+        <ion-icon name="log-out-outline"></ion-icon> LogOut
       </ion-button>
     </ion-col>
   </ion-row>
