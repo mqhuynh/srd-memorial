@@ -1,7 +1,8 @@
 export interface User {
-    userId:string;
-    userEmail:string;
-    userPhoto:string;
-    userFirstname:string;
-    userLastname:string;
+  userId: string;
+  IsApproved: boolean;
+  userEmail: string;
+  userPhoto: string;
+  userFirstname: string;
+  userLastname: string;
 }
