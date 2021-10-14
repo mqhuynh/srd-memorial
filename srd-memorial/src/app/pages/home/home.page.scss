@@ -1,19 +1,19 @@
 ion-card {
   width: 100%;
-  height: 550px;
+  height: 380px;
   box-shadow: none;
-  border-radius: 12px;
+  //border-radius: 12px;
 
   img {
     object-fit: cover;
     width: 100%;
-    transform: scale(1.1, 1.1) rotate(1deg);
-    transition: 600ms all ease-in-out;
+    //transform: scale(1.1, 1.1) rotate(1deg);
+    //transition: 600ms all ease-in-out;
   }
 }
 
 .swiper-slide-active {
-  transform: scale(1.05, 1.05);
+  //transform: scale(1.05, 1.05);
 
   ion-card {
     img {
@@ -24,6 +24,28 @@ ion-card {
 
 .swiper-slide {
   transition: 1000ms all ease-in-out;
+}
+
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (max-width: 992px) {
+  ion-card {
+    width: 100%;
+    height: 280px;
+    box-shadow: none;
+    border-radius: 2px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      transform: scale(1.1, 1.1) rotate(1deg);
+      transition: 600ms all ease-in-out;
+    }
+  }
+  ion-col.homePageImage {
+    display: none;
+  }
 }
 
 ion-footer {

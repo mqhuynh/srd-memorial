@@ -8,27 +8,27 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['home.page.scss'],
 })
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HomePage implements OnInit {
-user:any;
-option = {
-  slidesPerView: 1,
-  centeredSlides: true,
-  loop: true,
-  spaceBetween: 5,
-  autoplay:true,
-}
+  user: any;
+  option = {
+    slidesPerView: 1,
+    speed: 86400000,
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 5,
+    autoplay: true,
+  };
   constructor(private auth: AuthService) {}
   ngOnInit() {
-    this.auth.user$.subscribe(user=>{
-      this.user=user;
+    this.auth.user$.subscribe((user) => {
+      this.user = user;
       console.log(user);
-    })
+    });
   }
 
   logout() {
     this.auth.signOut();
-  }//end of logout
-
+  } //end of logout
 }
