@@ -1,21 +1,60 @@
 <ion-content>
+  <h2
+    style="
+      text-align: center;
+      background-color: gold;
+      height: auto;
+      margin-top: 3%;
+    "
+  >
+    Recent Announcement!!
+  </h2>
   <ion-slides [options]="option">
     <ion-slide>
       <ion-card>
-        <img src="../../assets/flower.jpg" />
+        <img src="../../../assets/image01.jpg" />
       </ion-card>
     </ion-slide>
     <ion-slide>
       <ion-card>
-        <img src="../../assets/clement.jpg" />
+        <img src="../../../assets/image02.jpg" />
       </ion-card>
     </ion-slide>
     <ion-slide>
       <ion-card>
-        <img src="../../assets/wish.jpg" />
+        <img src="../../../assets/image03.jpg" />
       </ion-card>
     </ion-slide>
   </ion-slides>
+  <ion-grid style="margin-top: 10%">
+    <ion-row>
+      <ion-col>
+        <div style="margin-top: 1%">
+          <ion-card style="padding-left: 10%">
+            <ion-list style="color: black">
+              <ion-row><h2>Stories</h2></ion-row>
+              <ion-row><h1>Explore stories here</h1></ion-row>
+              <ion-row
+                ><p>
+                  Please Click below button to explore different stories
+                </p></ion-row
+              >
+              <ion-button color="tertiary" shape="round">Learn more</ion-button>
+            </ion-list>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col class="homePageImage">
+        <div>
+          <ion-card style="height: 350px; object-fit: cover">
+            <ion-list style="color: black">
+              <ion-row> <img src="../../../assets/story.jpg" /></ion-row>
+            </ion-list>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 <ion-footer class="ion-no-border" style="text-align: center">
   <ion-toolbar style="color: white">
