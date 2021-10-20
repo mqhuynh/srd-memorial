@@ -36,6 +36,7 @@ export class RegisterPage implements OnInit {
       this.afauth
         .createUserWithEmailAndPassword(this.email, this.password)
         .then((data) => {
+          data.user.sendEmailVerification();
           this.afs
             .collection('user')
             .doc(data.user.uid)
@@ -54,8 +55,14 @@ export class RegisterPage implements OnInit {
             .catch((error) => {
               loading.dismiss();
               this.toast(error.message, 'danger');
+            })
+            .catch((error) => {
+              loading.dismiss();
+              this.toast(error.message, 'danger');
             });
         });
+    } else {
+      this.toast('Please fill the form!', 'warning');
     }
   } //end of register
 
