@@ -2,3 +2,20 @@ ion-content {
   --background: #fff url("../../../assets/about.jpg") no-repeat center center /
     cover;
 }
+@media screen and (min-width: 992px) {
+  ion-card.about {
+    color: black;
+    opacity: 80%;
+    margin: 160px 200px 0px 200px;
+    padding: 70px 50px 50px 50px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  ion-card.about {
+    color: black;
+    opacity: 80%;
+    margin: 40px 40px 0px 40px;
+    padding: 10px 20px 20px 20px;
+  }
+}
