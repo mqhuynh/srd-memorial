@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1119px" height="413px" viewBox="0 0 1119 413" version="1.1">
+  <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+  <title>Mask Group (2)</title>
+  <desc>Created with Sketch.</desc>
+  <defs>
+    <rect id="path-1" x="0" y="0" width="1600" height="413"></rect>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Mask-Group-(2)" transform="translate(-481.000000, 0.000000)">
+      <mask id="mask-2" fill="white">
+        <use xlink:href="#path-1"></use>
+      </mask>
+      <g id="Rectangle"></g>
+      <path d="M1761.39,-221.554 L1311.99,227.945 C1225.39,192.842 1130.58,173.239 1031.22,173.239 C616.914,173.239 281,509.224 281,923.62 C281,1338.02 616.914,1674 1031.22,1674 C1445.07,1674 1780.53,1338.93 1781.00159,925.443 L1781.00159,-213.348 C1781.44,-223.833 1768.68,-228.848 1761.39,-221.554 Z" id="Path" fill="#000061" fill-rule="nonzero" mask="url(#mask-2)"></path>
+    </g>
+  </g>
+</svg>
