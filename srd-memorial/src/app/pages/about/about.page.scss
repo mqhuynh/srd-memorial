@@ -1,24 +1,5 @@
 ion-content {
-  --background: rgba(255, 255, 255, 0.944) ;
-}
-.flex-container {
-  margin-top: 100px !important;
-  padding: 0;
-  -ms-box-orient: horizontal;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-}
-
-.row            { 
-  -webkit-flex-direction: row; 
-  flex-direction: row;
+  --background: rgba(255, 255, 255, 0.944);
 }
 
 ion-card {
@@ -26,36 +7,32 @@ ion-card {
   opacity: 0.9;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   &:hover {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @media screen and (min-width: 992px) {
-  ion-card.about {
-    color: black;
-    opacity: 80%;
-    margin: 160px 200px 0px 200px;
-    padding: 70px 50px 50px 50px;
+  h1.about {
+    background-color: #1a30acb6;
+    background-image: url("../../../assets/aboutBackground.svg");
+    padding-bottom: 20%;
+    border-radius: 5%;
   }
-  
-}
-
-@media screen and (max-width: 600px) {
-  ion-card.about {
-    color: black;
-    opacity: 80%;
-    margin: 40px 40px 0px 40px;
-    padding: 10px 20px 20px 20px;
+  h1 {
   }
-  .flex-container {
-    display: flex;
-  }
-  .row {
-    -webkit-flex-direction: column; 
-  flex-direction: column;
+  ion-grid {
+    margin-left: 10%;
+    margin-bottom: 10%;
+    margin-top: -10%;
   }
 }
 
+@media screen and (max-width: 992px) {
+  ion-grid {
+    margin-bottom: 10%;
+    margin-top: -10%;
+  }
+}
 
 ion-footer {
   margin-bottom: 0;
