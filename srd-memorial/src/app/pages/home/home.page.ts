@@ -11,6 +11,7 @@ import { AuthService } from '../../services/auth.service';
   providedIn: 'root',
 })
 export class HomePage implements OnInit {
+  show: boolean = true;
   user: any;
   option = {
     slidesPerView: 1,
