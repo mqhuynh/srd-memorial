@@ -43,9 +43,10 @@ export class RegisterPage implements OnInit {
             .set({
               userId: data.user.uid,
               IsApproved: false,
-              userEmail: this.email,
               userFirstname: this.firstname,
               userLastname: this.lastname,
+              userEmail: this.email,
+              createdAt: Date.now(),
             })
             .then(() => {
               loading.dismiss();
