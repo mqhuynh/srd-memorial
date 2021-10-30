@@ -6,6 +6,8 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+//pagination
+import { NgxPaginationModule } from 'ngx-pagination';
 //Environment
 import { environment } from '../environments/environment';
 
@@ -15,13 +17,11 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
-
 //Authentication
 import { AuthService } from './services/auth.service';
 
 //Auth Guard
 import { AuthGuard } from './guards/auth.guard';
-
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,16 +29,18 @@ import { AuthGuard } from './guards/auth.guard';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(),AppRoutingModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireStorageModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    NgxPaginationModule,
   ],
   providers: [
     AuthService,
     AuthGuard,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent],
 })
