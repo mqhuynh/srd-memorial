@@ -6,7 +6,8 @@
         size-sm="6"
         size-md="4"
         size-lg="3"
-        *ngFor="let item of data; let i = index;"
+        style="margin-top: 5%"
+        *ngFor="let item of data|paginate: { itemsPerPage: 8, currentPage: cp };; let i = index;"
       >
         <ion-card>
           <ion-card-header>
@@ -50,5 +51,6 @@
         </ion-card>
       </ion-col>
     </ion-row>
+    <pagination-controls (pageChange)="cp = $event"></pagination-controls>
   </ion-grid>
 </ion-content>

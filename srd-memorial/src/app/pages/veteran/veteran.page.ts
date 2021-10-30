@@ -9,6 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class VeteranPage implements OnInit {
   data: any[];
+  cp: number = 1;
   currentData = null;
   currentIndex = -1;
   constructor(private auth: AuthService) {}
