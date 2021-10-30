@@ -2,21 +2,28 @@ import { Injectable } from '@angular/core';
 import { User } from '../models/user';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import {
+  AngularFireDatabase,
+  AngularFireList,
+} from '@angular/fire/compat/database';
 import * as firebase from 'firebase/compat/app';
 import { Router } from '@angular/router';
-import { map } from 'rxjs/operators';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { Veteran } from '../models/veteran';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+  private dbPath = '1iv5ISsR1a7ujFLtiCsyKR8MYVsFqKB9PC99JTE1iLFs/Sheet1';
+  dataRef: AngularFireList<Veteran[]> = null;
   user$: Observable<User>;
   user: User;
 
   constructor(
+    private db: AngularFireDatabase,
     private afs: AngularFirestore,
     private afauth: AngularFireAuth,
     private router: Router,
@@ -32,6 +39,7 @@ export class AuthService {
         }
       })
     );
+    this.dataRef = db.list(this.dbPath);
   } //end of constructor
   async SignIn(email, password) {
     const loading = await this.LoadingCtrl.create({
@@ -87,4 +95,7 @@ export class AuthService {
     });
     toast.present();
   } //end of toast
+  getAll(): AngularFireList<Veteran[]> {
+    return this.dataRef;
+  }
 }
