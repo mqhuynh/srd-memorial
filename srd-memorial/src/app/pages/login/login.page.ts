@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import {ToastController } from '@ionic/angular';
 import { AuthService } from '../../services/auth.service';
@@ -13,7 +14,8 @@ export class LoginPage implements OnInit {
 
   constructor(
     private auth:AuthService,
-    private toastr:ToastController
+    private toastr:ToastController,
+    private router:Router
   ) { }
 
   ngOnInit() {
@@ -28,7 +30,10 @@ export class LoginPage implements OnInit {
     }
     
   }
-
+  forget(){
+    this.router.navigate(['/forget-password']);
+  }//end of forget password
+  
   async toast(message,status){
     const toast =await this.toastr.create({
       message:message,
