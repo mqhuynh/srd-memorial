@@ -25,6 +25,10 @@ export class MenuPage implements OnInit {
     {
       title: 'Veterans',
       path: '/menu/veteran'
+    },
+    {
+      title: 'Admin',
+      path: '/menu/admin-portal'
     }
   ];
   title = 'Home';
@@ -43,7 +47,7 @@ export class MenuPage implements OnInit {
     const newWidth = event.target.innerWidth;
     this.toggleMenu(newWidth);
   }
- 
+
   toggleMenu(width) {
     if (width > 768) {
       this.menuCtrl.enable(false, 'myMenu');
@@ -51,7 +55,7 @@ export class MenuPage implements OnInit {
       this.menuCtrl.enable(true, 'myMenu');
     }
   }
- 
+
   setTitle(title) {
     this.title = title
   }

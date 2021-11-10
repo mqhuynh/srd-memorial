@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminPortalPageModule } from '../admin-portal/admin-portal.module';
 
 import { MenuPage } from './menu.page';
 
@@ -11,7 +12,7 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('../home/home.module').then( m => m.HomePageModule),
-      
+
       },
       {
         path: 'about',
@@ -24,7 +25,11 @@ const routes: Routes = [
       {
         path: 'veteran',
         loadChildren: () => import('../veteran/veteran.module').then( m => m.VeteranPageModule)
-      }
+      },
+      {
+        path: 'admin-portal',
+        loadChildren: () => import('../admin-portal/admin-portal.module').then( m => m.AdminPortalPageModule)
+      },
     ],
   }
 ];
