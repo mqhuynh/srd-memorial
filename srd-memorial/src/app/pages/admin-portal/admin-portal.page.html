@@ -1,0 +1,52 @@
+<ion-content>
+  <div>
+    <ion-grid>
+      <ion-row nowrap class = "headers" >
+        <ion-col size = "3" class = "single-border"> Full Name</ion-col>
+        <ion-col size = "2" class = "single-border"> Email</ion-col>
+        <ion-col size = "4" class = "single-border"> Permission </ion-col>
+        <ion-col size = "3" class = "single-border"> Authorization </ion-col>
+      </ion-row>
+
+      <div *ngFor = " let item of user " >
+        <ion-row nowrap class= "content" *ngIf = "!item.isedit; else elseBlock"  >
+    <ion-col size = "3" >
+      {{item.firstname | titlecase  }}{{" "}} {{item.lastname | titlecase }}
+      </ion-col>
+        <ion-col size ="2"> {{item.email | lowercase }} </ion-col>
+        <ion-col size ="4"> {{item.isApproved }}</ion-col>
+        <ion-col size ="3" >
+        <ion-button (click) = "editUser(item)" color = "primary" shape = "round" >
+        Edit
+      </ion-button>
+      <ion-button (click) = "deleteUser(item.id)" color = "danger" shape = "round" >
+      Delete
+      </ion-button>
+        </ion-col>
+        </ion-row>
+
+        <ng-template #elseBlock >
+          <ion-row nowrap class = "content" >
+            <ion-col size = "3" >
+              {{item.firstname | titlecase }}{{" "}} {{item.lastname | titlecase}}
+              </ion-col>
+              <ion-col size ="2"> {{item.email | lowercase}} </ion-col>
+              <ion-col size ="4">
+              <input
+                 type= "text"
+                 [(ngModel)]= "item.isApproved"
+                 class = "form-control"
+                 />
+              </ion-col>
+              <ion-col size = "3" >
+                <ion-button color="primary" (click)="updateUser(item)" shape="round"> Update
+                </ion-button>
+                <ion-button color="warning" (click)="item.isedit = false" shape="round"> Cancel
+                </ion-button>
+              </ion-col>
+          </ion-row>
+        </ng-template>
+      </div>
+    </ion-grid>
+  </div>
+</ion-content>
