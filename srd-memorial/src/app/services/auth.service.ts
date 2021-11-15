@@ -98,4 +98,14 @@ export class AuthService {
   getAll(): AngularFireList<Veteran[]> {
     return this.dataRef;
   }
+
+  getAllUsers(){
+    return this.afs.collection('user').snapshotChanges();
+  }
+  updateUser(userid, data){
+    this.afs.doc('user/' + userid).update(data);
+  }
+  deleteUser(user_id){
+    this.afs.doc('user/' + user_id).delete();
+  }
 }
