@@ -42,6 +42,7 @@ export class RegisterPage implements OnInit {
             .doc(data.user.uid)
             .set({
               userId: data.user.uid,
+              userRole: 'user',
               IsApproved: false,
               userFirstname: this.firstname,
               userLastname: this.lastname,

@@ -1,5 +1,6 @@
 export interface User {
   userId: string;
+  userRole:string;
   IsApproved: boolean;
   userFirstname: string;
   userLastname: string;
