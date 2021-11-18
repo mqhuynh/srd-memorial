@@ -1,4 +1,9 @@
 <ion-content>
+  <ion-searchbar
+    placeholder="Search here..."
+    [(ngModel)]="term"
+    animated="true"
+  ></ion-searchbar>
   <ion-grid>
     <ion-row>
       <ion-col
@@ -7,7 +12,7 @@
         size-md="4"
         size-lg="3"
         style="margin-top: 5%"
-        *ngFor="let item of data|paginate: { itemsPerPage: 8, currentPage: cp };; let i = index;"
+        *ngFor="let item of data|filter:term|paginate: { itemsPerPage: 8, currentPage: cp };; let i = index;"
       >
         <ion-card>
           <ion-card-header>
