@@ -36,6 +36,7 @@ const routes: Routes = [
     path: 'admin-portal',
     loadChildren: () => import('./pages/admin-portal/admin-portal.module').then( m => m.AdminPortalPageModule)
   },
+  
 ];
 
 @NgModule({

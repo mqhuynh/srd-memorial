@@ -15,6 +15,10 @@ const routes: Routes = [
 
       },
       {
+        path: 'popover',
+        loadChildren: () => import('../popover/popover.module').then( m => m.PopoverPageModule)
+      },
+      {
         path: 'about',
         loadChildren: () => import('../about/about.module').then( m => m.AboutPageModule)
       },
