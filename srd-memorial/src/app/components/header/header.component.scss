@@ -12,8 +12,19 @@
 }
 
 @media (max-width: 768px) {
-  .mobile-header {
+  ion-toolbar {
+    --background: #26316d;
+    margin: 0;
+    height: 100% !important;
+    ion-menu-button {
+      color: white;
+    }
+  }
+  ion-header.mobile-header {
     display: block;
+    padding: 0;
+    margin: 0;
+    height: 7vh !important;
   }
 
   .header {
