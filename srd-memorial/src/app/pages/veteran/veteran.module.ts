@@ -8,7 +8,7 @@ import { VeteranPageRoutingModule } from './veteran-routing.module';
 
 import { VeteranPage } from './veteran.page';
 import { NgxPaginationModule } from 'ngx-pagination';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   imports: [
     CommonModule,
@@ -16,6 +16,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     IonicModule,
     VeteranPageRoutingModule,
     NgxPaginationModule,
+    Ng2SearchPipeModule,
   ],
   declarations: [VeteranPage],
 })
