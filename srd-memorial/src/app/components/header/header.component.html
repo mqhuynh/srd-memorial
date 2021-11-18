@@ -57,9 +57,10 @@
         Contact
       </ion-button>
       <ion-button
+        *ngIf="ShowTab"
         style="color: #fff"
         fill="clear"
-        routerLink="/menu/admin-portal"
+        routerLink="/menu/admin"
         routerDirection="root"
         routerLinkActive="active-item"
       >
