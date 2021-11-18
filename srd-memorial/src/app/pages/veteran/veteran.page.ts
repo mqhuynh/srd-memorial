@@ -8,6 +8,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./veteran.page.scss'],
 })
 export class VeteranPage implements OnInit {
+  term: '';
   data: any[];
   cp: number = 1;
   currentData = null;
