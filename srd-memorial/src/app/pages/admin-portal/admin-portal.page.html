@@ -13,7 +13,7 @@
           <ion-col size="3">
             {{item.firstname | titlecase}}{{" "}}{{item.lastname |titlecase }}
           </ion-col>
-          <ion-col size="2"> {{item.email}} </ion-col>
+          <ion-col size="2"> {{item.email | lowercase}} </ion-col>
           <ion-col size="2">
             {{item.createdTime | date: 'dd MMM YYYY'}}
           </ion-col>
@@ -26,17 +26,16 @@
               (click)="deleteUser(item.id)"
               color="danger"
               shape="round"
-              >Delete</ion-button
-            >
+              >Delete</ion-button>
           </ion-col>
         </ion-row>
 
         <ng-template #elseBlock>
           <ion-row nowrap class="content">
             <ion-col size="3" class="single-border">
-              {{item.firstname }}{{" "}}{{item.lastname}}
+              {{item.firstname | titlecase}}{{" "}}{{item.lastname |titlecase }}
             </ion-col>
-            <ion-col size="2" class="single-border"> {{item.email}} </ion-col>
+            <ion-col size="2" class="single-border"> {{item.email | lowercase}} </ion-col>
             <ion-col size="2" class="single-border">
               {{item.createdTime | date: 'dd MMM YYYY'}}
             </ion-col>
@@ -46,6 +45,7 @@
                 [(ngModel)]="item.isApproved"
                 class="form-control"
               />
+
             </ion-col>
             <ion-col size="3" class="single-border">
               <ion-button
