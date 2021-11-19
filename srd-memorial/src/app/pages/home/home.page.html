@@ -1,6 +1,10 @@
 <ion-content>
   <h2 *ngIf="show" class="announcement">Recent Announcement!</h2>
-  <ion-slides [options]="option">
+  <ion-slides 
+  [options]="slideOptions"
+    pager="true"
+    #slider
+    (ionSlidesDidLoad)="slidesDidLoad(slider)">
     <ion-slide>
       <ion-card>
         <img src="../../../assets/image01.jpg" />
