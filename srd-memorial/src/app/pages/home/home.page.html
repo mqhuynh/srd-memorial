@@ -1,10 +1,6 @@
 <ion-content>
   <h2 *ngIf="show" class="announcement">Recent Announcement!</h2>
-  <ion-slides 
-  [options]="slideOptions"
-    pager="true"
-    #slider
-    (ionSlidesDidLoad)="slidesDidLoad(slider)">
+  <ion-slides [options]="option">
     <ion-slide>
       <ion-card>
         <img src="../../../assets/image01.jpg" />
@@ -27,21 +23,14 @@
         <div style="margin: 1%">
           <ion-card style="padding-left: 10%">
             <ion-list style="color: black">
-              <ion-row style="text-decoration: solid"
-                ><h1>Project CDCS</h1></ion-row
-              >
-              <ion-row><h2>Use of this project</h2></ion-row>
+              <ion-row style="text-decoration: solid"><h1>Stories</h1></ion-row>
+              <ion-row><h2>Explore stories here</h2></ion-row>
               <ion-row
                 ><p>
-                  Please Click below button to know about this project.
+                  Please Click below button to explore different stories
                 </p></ion-row
               >
-              <ion-button
-                color="tertiary"
-                shape="round"
-                (click)="popClick($event)"
-                >Learn more</ion-button
-              >
+              <ion-button color="tertiary" shape="round">Learn more</ion-button>
             </ion-list>
           </ion-card>
         </div>

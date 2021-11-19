@@ -17,15 +17,15 @@
           <ion-col size="2">
             {{item.createdTime | date: 'dd MMM YYYY'}}
           </ion-col>
-          <ion-col size="2"> {{item.isApproved}} </ion-col>
+          <ion-col size="2"> {{item.isApproved }} </ion-col>
           <ion-col size="3">
-            <ion-button (click)="editUser(item)" color="primary" shape="square"
+            <ion-button (click)="editUser(item)" color="primary" shape="round"
               >Edit
             </ion-button>
             <ion-button
               (click)="deleteUser(item.id)"
               color="danger"
-              shape="square"
+              shape="round"
               >Delete</ion-button
             >
           </ion-col>
@@ -51,13 +51,13 @@
               <ion-button
                 color="warning"
                 (click)="updateUser(item)"
-                shape="square"
+                shape="round"
                 >Update
               </ion-button>
               <ion-button
                 color="danger"
                 (click)="item.isedit = false"
-                shape="square"
+                shape="round"
                 >Cancel</ion-button
               >
             </ion-col>
