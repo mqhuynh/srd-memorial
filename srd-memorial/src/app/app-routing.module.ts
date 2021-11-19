@@ -32,11 +32,8 @@ const routes: Routes = [
     path: 'page-not-found',
     loadChildren: () => import('./pages/page-not-found/page-not-found.module').then( m => m.PageNotFoundPageModule)
   },
-  {
-    path: 'admin-portal',
-    loadChildren: () => import('./pages/admin-portal/admin-portal.module').then( m => m.AdminPortalPageModule)
-  },
   
+
 ];
 
 @NgModule({

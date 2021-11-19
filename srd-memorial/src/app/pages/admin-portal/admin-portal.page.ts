@@ -20,6 +20,7 @@ export class AdminPortalPage implements OnInit {
           firstname: e.payload.doc.data()['userFirstname'],
           lastname: e.payload.doc.data()['userLastname'],
           isApproved: e.payload.doc.data()['IsApproved'],
+          createdTime: e.payload.doc.data()['createdAt'],
 
         }));
       console.log(this.user);
