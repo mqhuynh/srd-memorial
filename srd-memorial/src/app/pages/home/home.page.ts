@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { PopoverController } from '@ionic/angular';
+import { PopoverController,IonSlides } from '@ionic/angular';
 import { AuthService } from '../../services/auth.service';
 import { PopoverPage } from '../popover/popover.page';
 
@@ -15,14 +15,11 @@ import { PopoverPage } from '../popover/popover.page';
 export class HomePage implements OnInit {
   show: boolean = true;
   user: any;
-  option = {
-    slidesPerView: 1,
-    speed: 86400000,
-    centeredSlides: true,
-    loop: true,
-    spaceBetween: 5,
-    autoplay: true,
+ slideOptions = {
+    initialSlide: 1,
+    speed: 500,
   };
+
   constructor(private auth: AuthService,public popoverController: PopoverController) {}
   ngOnInit() {
     this.auth.user$.subscribe((user) => {
@@ -30,6 +27,11 @@ export class HomePage implements OnInit {
       console.log(user);
     });
   }
+  slidesDidLoad(slides: IonSlides) {
+    slides.startAutoplay();
+  }
+
+
   async popClick(event) {
     const popover = await this.popoverController.create({
       component: PopoverPage,
