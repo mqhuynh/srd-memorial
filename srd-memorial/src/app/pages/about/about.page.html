@@ -6,12 +6,17 @@
         <div>
           <img src="../../../assets/person.png" />
           <ion-card-header>
-            <ion-card-title>Name</ion-card-title>
-            <ion-card-subtitle>Position</ion-card-subtitle>
+            <ion-card-title>Name: Dr. Minh Huynh</ion-card-title>
+            <ion-card-subtitle>Position: Project Manager</ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
+            <div [ngClass]="{'limitTextHeight': isReadMore}" >
+
+              Minh Q. Huynh is a Professor of MIS at Southeastern Louisiana University. He received his Ph.D. from State University of New York at Binghamton, and his B.S. in Computer Sciences from University of Maryland University College. His teaching interests are in the areas of E-Commerce, Digital Marketing, Web Design, Introduction to MIS.  His research interests include software development using open source, web database implementation, web apps, technology supported distance education, IT for small businesses. His publications appear in journals such as the Journal of Information Technology Education: Innovations in Practice (JITE:IIP), the Communications of ACM, Journal of AIS, Communications of AIS, European Journal of IS, Journal of Electronic Commerce in Organizations, Journal of Information Systems Education, Business Studies Journal.  He currently serves as Editor for Journal of Information Technology Education: Innovations in Practice and Journal of Information Technology Education: Research.
+          </div>
+          <button type="button" (click)="showText()">
+              {{ isReadMore ? 'Read More': 'Read Less' }}
+            </button>
           </ion-card-content>
         </div>
       </ion-col>
@@ -19,12 +24,17 @@
         <div>
           <img src="../../../assets/person.png" />
           <ion-card-header>
-            <ion-card-title>Name</ion-card-title>
-            <ion-card-subtitle>Position</ion-card-subtitle>
+            <ion-card-title>Name: Anish Gyawali</ion-card-title>
+            <ion-card-subtitle>Position: Software Developer</ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
+            <div [ngClass]="{'limitTextHeight': isReadMore}" >
             Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
             Madison was named the capital of the Wisconsin Territory in 1836.
+          </div>
+          <button type="button" (click)="showText()">
+              {{ isReadMore ? 'Read More': 'Read Less' }}
+            </button>
           </ion-card-content>
         </div>
       </ion-col>
@@ -32,17 +42,43 @@
         <div>
           <img src="../../../assets/person.png" />
           <ion-card-header>
-            <ion-card-title>Name</ion-card-title>
-            <ion-card-subtitle>Position</ion-card-subtitle>
+            <ion-card-title>Name: Subash Dangi</ion-card-title>
+            <ion-card-subtitle>Position: Software Developer</ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
+            <div [ngClass]="{'limitTextHeight': isReadMore}" >
             Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
             Madison was named the capital of the Wisconsin Territory in 1836.
+          </div>
+          <button type="button" (click)="showText()">
+              {{ isReadMore ? 'Read More': 'Read Less' }}
+            </button>
           </ion-card-content>
         </div>
+        <div>
+          <ion-row>
+          <img src="../../../assets/person.png" />
+          <ion-card-header>
+            <ion-card-title>Name: Dr. Minh Huynh</ion-card-title>
+            <ion-card-subtitle>Position: Project Manager</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <div [ngClass]="{'limitTextHeight': isReadMore}" >
+
+              Minh Q. Huynh is a Professor of MIS at Southeastern Louisiana University. He received his Ph.D. from State University of New York at Binghamton, and his B.S. in Computer Sciences from University of Maryland University College. His teaching interests are in the areas of E-Commerce, Digital Marketing, Web Design, Introduction to MIS.  His research interests include software development using open source, web database implementation, web apps, technology supported distance education, IT for small businesses. His publications appear in journals such as the Journal of Information Technology Education: Innovations in Practice (JITE:IIP), the Communications of ACM, Journal of AIS, Communications of AIS, European Journal of IS, Journal of Electronic Commerce in Organizations, Journal of Information Systems Education, Business Studies Journal.  He currently serves as Editor for Journal of Information Technology Education: Innovations in Practice and Journal of Information Technology Education: Research.
+          </div>
+          <button type="button" (click)="showText()">
+              {{ isReadMore ? 'Read More': 'Read Less' }}
+            </button>
+          </ion-card-content>
+          </ion-row>
+        </div>
+      
+
+        
       </ion-col>
-    </ion-row>
-  </ion-grid>
+ </ion-row>
+</ion-grid>
 </ion-content>
 
 <ion-footer class="ion-no-border" style="text-align: center">
