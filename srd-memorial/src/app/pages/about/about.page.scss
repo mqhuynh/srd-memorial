@@ -11,6 +11,10 @@ ion-card {
   }
 }
 
+.limitTextHeight {
+  height: 80px;
+  overflow: hidden;
+}
 @media screen and (min-width: 992px) {
   h1.about {
     background-color: #1a30acb6;
@@ -42,3 +46,4 @@ ion-footer {
 ion-toolbar:hover {
   --ion-background-color: #444d81 !important;
 }
+

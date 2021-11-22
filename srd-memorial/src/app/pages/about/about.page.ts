@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.page.scss'],
 })
 export class AboutPage implements OnInit {
-
+  isReadMore = true
   constructor() { }
 
   ngOnInit() {
   }
-
+  showText() {
+     this.isReadMore = !this.isReadMore
+  }
 }
