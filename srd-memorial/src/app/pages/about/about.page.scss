@@ -2,19 +2,6 @@ ion-content {
   --background: rgba(255, 255, 255, 0.944);
 }
 
-ion-card {
-  max-width: 20%;
-  opacity: 0.9;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  &:hover {
-    opacity: 1;
-  }
-}
-
-.limitTextHeight {
-  height: 80px;
-  overflow: hidden;
-}
 @media screen and (min-width: 992px) {
   h1.about {
     background-color: #1a30acb6;
@@ -23,16 +10,20 @@ ion-card {
     border-radius: 5%;
   }
   ion-grid {
-    margin-left: 10%;
     margin-bottom: 10%;
     margin-top: -10%;
+  }
+  ion-card {
+    height: 100%;
   }
 }
 
 @media screen and (max-width: 992px) {
   ion-grid {
     margin-bottom: 10%;
-    margin-top: -10%;
+  }
+  ion-card {
+    height: 100%;
   }
 }
 
@@ -46,4 +37,3 @@ ion-footer {
 ion-toolbar:hover {
   --ion-background-color: #444d81 !important;
 }
-
