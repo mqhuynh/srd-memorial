@@ -1,3 +1,5 @@
+@import "../../../theme/variables.scss";
+
 @media (min-width: 768px) {
   ion-router-outlet {
     margin-top: 63px;
@@ -10,7 +12,7 @@
   }
 }
 .active-item {
-  color: #26316d;
+  color: $featured;
   font-weight: 500;
 }
 ion-title.large-title {

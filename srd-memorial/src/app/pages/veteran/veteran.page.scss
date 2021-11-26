@@ -1,3 +1,5 @@
+@import "../../../theme/variables.scss";
+
 ion-content {
   --background: #f7fafc !important;
 
@@ -44,16 +46,15 @@ ion-card-content {
   }
   .container img {
     display: block;
-    width: 250px;
+    width: 300px;
     height: 300px;
-    border-radius: 10%;
   }
   .container ion-button {
     position: absolute;
     font-size: large;
     font-weight: bolder;
     color: white;
-    background-color: #8994d6a8;
+    background-color: $highlight;
     top: 80%;
     left: 40%;
     transform: translate(-50%, -50%);
@@ -69,15 +70,4 @@ ion-card-content.card-content {
   color: white;
   background: url("../../../assets/aboutBackground.svg") no-repeat center bottom;
   height: 100%;
-}
-
-ion-footer {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  position: relative;
-  --ion-background-color: #26316d !important;
-}
-
-ion-toolbar:hover {
-  --ion-background-color: #444d81 !important;
 }

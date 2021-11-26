@@ -1,23 +1,15 @@
 <ion-content>
   <h2 *ngIf="show" class="announcement">Recent Announcement!</h2>
-  <ion-slides 
-  [options]="slideOptions"
-    pager="true"
-    #slider
-    (ionSlidesDidLoad)="slidesDidLoad(slider)">
-    <ion-slide>
+  <!-- <h2 *ngIf="show" class="announcement">
+    <a target="_blank" rel="noopener noreferrer" href="www.google.com "
+      >Recent Announcement!
+    </a>
+  </h2> -->
+
+  <ion-slides [options]="slideOpts" pager="true">
+    <ion-slide *ngFor="let item of Images">
       <ion-card>
-        <img src="../../../assets/image01.jpg" />
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card>
-        <img src="../../../assets/image02.jpg" />
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card>
-        <img src="../../../assets/image03.jpg" />
+        <img src="{{item.HomeScreen}}" />
       </ion-card>
     </ion-slide>
   </ion-slides>
@@ -58,8 +50,8 @@
     </ion-row>
   </ion-grid>
 </ion-content>
-<ion-footer class="ion-no-border" style="text-align: center">
-  <ion-toolbar style="color: white">
+<ion-footer style="text-align: center">
+  <ion-toolbar color="featured">
     <ion-title>Copyright @2021 by CDCS</ion-title>
     <ion-card-subtitle
       ><i

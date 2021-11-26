@@ -26,7 +26,8 @@
               (click)="deleteUser(item.id)"
               color="danger"
               shape="round"
-              >Delete</ion-button>
+              >Delete</ion-button
+            >
           </ion-col>
         </ion-row>
 
@@ -35,7 +36,9 @@
             <ion-col size="3" class="single-border">
               {{item.firstname | titlecase}}{{" "}}{{item.lastname |titlecase }}
             </ion-col>
-            <ion-col size="2" class="single-border"> {{item.email | lowercase}} </ion-col>
+            <ion-col size="2" class="single-border">
+              {{item.email | lowercase}}
+            </ion-col>
             <ion-col size="2" class="single-border">
               {{item.createdTime | date: 'dd MMM YYYY'}}
             </ion-col>
@@ -45,7 +48,6 @@
                 [(ngModel)]="item.isApproved"
                 class="form-control"
               />
-
             </ion-col>
             <ion-col size="3" class="single-border">
               <ion-button
@@ -67,3 +69,14 @@
     </ion-grid>
   </div>
 </ion-content>
+
+<ion-footer style="text-align: center">
+  <ion-toolbar color="featured">
+    <ion-title>Copyright @2021 by CDCS</ion-title>
+    <ion-card-subtitle
+      ><i
+        >For the Further information, please contact Dr.Minh Huynh</i
+      ></ion-card-subtitle
+    >
+  </ion-toolbar>
+</ion-footer>
