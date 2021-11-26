@@ -1,5 +1,16 @@
 <ion-content>
-  <h1 class="about"></h1>
+  <div class="about">
+    <h2
+      style="
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: xx-large;
+      "
+    >
+      Our Team
+    </h2>
+  </div>
   <ion-grid>
     <ion-row>
       <ion-col
@@ -12,7 +23,16 @@
         <ion-card>
           <img src="{{item.Image}}" />
           <ion-card-header>
-            <ion-card-title>Name: {{item.Name}}</ion-card-title>
+            <ion-card-title
+              >Name:
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                style="text-decoration: none; color: black; font-weight: bold"
+                href="{{item.link}}"
+                >{{item.Name | titlecase}}</a
+              ></ion-card-title
+            >
             <ion-card-subtitle> Position: {{item.Position}}</ion-card-subtitle>
           </ion-card-header>
 
@@ -32,8 +52,8 @@
   </ion-grid>
 </ion-content>
 
-<ion-footer class="ion-no-border" style="text-align: center">
-  <ion-toolbar style="color: white">
+<ion-footer style="text-align: center">
+  <ion-toolbar color="featured">
     <ion-title>Copyright @2021 by CDCS</ion-title>
     <ion-card-subtitle
       ><i

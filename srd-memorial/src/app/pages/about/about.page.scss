@@ -1,13 +1,15 @@
+@import "../../../theme/variables.scss";
+
 ion-content {
   --background: rgba(255, 255, 255, 0.944);
 }
 
 @media screen and (min-width: 992px) {
-  h1.about {
-    background-color: #1a30acb6;
+  .about {
+    background-color: $featured;
     background-image: url("../../../assets/aboutBackground.svg");
-    padding-bottom: 20%;
-    border-radius: 5%;
+    padding-bottom: 10%;
+    padding-top: 5%;
   }
   ion-grid {
     margin-bottom: 10%;
@@ -25,15 +27,4 @@ ion-content {
   ion-card {
     height: 100%;
   }
-}
-
-ion-footer {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  position: relative;
-  --ion-background-color: #26316d !important;
-}
-
-ion-toolbar:hover {
-  --ion-background-color: #444d81 !important;
 }

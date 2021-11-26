@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { PopoverController, IonSlides } from '@ionic/angular';
 import { AuthService } from '../../services/auth.service';
 import { PopoverPage } from '../popover/popover.page';
+import { ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -13,13 +14,34 @@ import { PopoverPage } from '../popover/popover.page';
   providedIn: 'root',
 })
 export class HomePage implements OnInit {
+  //@ViewChild('slider') slider: IonSlides;
   show: boolean = true;
   user: any;
-  slideOptions = {
+  Images = [
+    {
+      HomeScreen: '../../../assets/image05.jpg',
+    },
+    {
+      HomeScreen: '../../../assets/image06.jpg',
+    },
+    {
+      HomeScreen: '../../../assets/image07.jpg',
+    },
+  ];
+  slideOpts = {
     initialSlide: 1,
-    speed: 2000,
+    speed: 3000,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      reverseDirection: true,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
   };
-
   constructor(
     private auth: AuthService,
     public popoverController: PopoverController
@@ -30,9 +52,12 @@ export class HomePage implements OnInit {
       console.log(user);
     });
   }
-  slidesDidLoad(slides: IonSlides) {
-    slides.startAutoplay();
-  }
+  // getRandomIndex(): number {
+  //   return Math.floor(Math.random() * this.Images.length);
+  // }
+  // newSlide() {
+  //   this.slider.slideTo(this.getRandomIndex(), 100, false);
+  // }
 
   async popClick(event) {
     const popover = await this.popoverController.create({
