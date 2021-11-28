@@ -52,13 +52,6 @@ export class HomePage implements OnInit {
       console.log(user);
     });
   }
-  // getRandomIndex(): number {
-  //   return Math.floor(Math.random() * this.Images.length);
-  // }
-  // newSlide() {
-  //   this.slider.slideTo(this.getRandomIndex(), 100, false);
-  // }
-
   async popClick(event) {
     const popover = await this.popoverController.create({
       component: PopoverPage,
