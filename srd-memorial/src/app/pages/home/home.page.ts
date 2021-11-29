@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { PopoverController, IonSlides } from '@ionic/angular';
 import { AuthService } from '../../services/auth.service';
 import { PopoverPage } from '../popover/popover.page';
-import { ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -34,7 +33,7 @@ export class HomePage implements OnInit {
     loop: true,
     autoplay: {
       delay: 4000,
-      reverseDirection: true,
+      reverseDirection: false,
       disableOnInteraction: false,
     },
     pagination: {
