@@ -8,39 +8,42 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
-  user:any;
+  user: any;
   menuItems = [
     {
       title: 'Home',
-      path: '/'
+      path: '/',
     },
     {
       title: 'About',
-      path: '/menu/about'
+      path: '/menu/about',
     },
     {
       title: 'Contact',
-      path: '/menu/contact'
+      path: '/menu/contact',
     },
     {
       title: 'Veterans',
-      path: '/menu/veteran'
+      path: '/menu/veteran',
     },
     {
       title: 'Admin',
-      path: '/menu/admin-portal'
-    }
+      path: '/menu/admin-portal',
+    },
   ];
   title = 'Home';
-  constructor(private auth : AuthService,private menuCtrl:MenuController,private plt: Platform) { }
+  constructor(
+    private auth: AuthService,
+    private menuCtrl: MenuController,
+    private plt: Platform
+  ) {}
 
   ngOnInit() {
     const width = this.plt.width();
     this.toggleMenu(width);
-    this.auth.user$.subscribe(user=>{
-      this.user=user;
-      console.log(user);
-    })
+    this.auth.user$.subscribe((user) => {
+      this.user = user;
+    });
   }
   @HostListener('window:resize', ['$event'])
   private onResize(event) {
@@ -57,9 +60,9 @@ export class MenuPage implements OnInit {
   }
 
   setTitle(title) {
-    this.title = title
+    this.title = title;
   }
   logout() {
     this.auth.signOut();
-  }//end of logout
+  } //end of logout
 }

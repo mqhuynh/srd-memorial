@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { PopoverController, IonSlides } from '@ionic/angular';
+import { PopoverController } from '@ionic/angular';
 import { AuthService } from '../../services/auth.service';
 import { PopoverPage } from '../popover/popover.page';
+import SwiperCore, { Autoplay, Keyboard, Pagination } from 'swiper';
 
+SwiperCore.use([Autoplay, Keyboard, Pagination]);
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -13,7 +15,6 @@ import { PopoverPage } from '../popover/popover.page';
   providedIn: 'root',
 })
 export class HomePage implements OnInit {
-  //@ViewChild('slider') slider: IonSlides;
   show: boolean = true;
   user: any;
   Images = [
@@ -27,20 +28,6 @@ export class HomePage implements OnInit {
       HomeScreen: '../../../assets/image07.jpg',
     },
   ];
-  slideOpts = {
-    initialSlide: 1,
-    speed: 3000,
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      reverseDirection: false,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  };
   constructor(
     private auth: AuthService,
     public popoverController: PopoverController
@@ -48,7 +35,6 @@ export class HomePage implements OnInit {
   ngOnInit() {
     this.auth.user$.subscribe((user) => {
       this.user = user;
-      console.log(user);
     });
   }
   async popClick(event) {

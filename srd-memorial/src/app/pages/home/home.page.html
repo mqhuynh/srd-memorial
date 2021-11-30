@@ -5,23 +5,23 @@
       >Recent Announcement!
     </a>
   </h2> -->
-
-  <ion-slides [options]="slideOpts" pager="true">
-    <ion-slide *ngFor="let item of Images">
-      <ion-card>
-        <img src="{{item.HomeScreen}}" />
-      </ion-card>
-    </ion-slide>
-  </ion-slides>
-  <ion-grid style="margin-top: 7%">
+  <ion-card class="image">
+    <swiper
+      [config]="{initialSlide: 1, speed: 3000, loop: true, autoplay: {delay: 4000,  reverseDirection: false, disableOnInteraction: false}}"
+      [pagination]="true"
+      [keyboard]="true"
+    >
+      <ng-template swiperSlide *ngFor="let item of Images">
+        <img src="{{item.HomeScreen}}" /> </ng-template
+    ></swiper>
+  </ion-card>
+  <ion-grid style="margin-top: 7%; margin-bottom: 3%">
     <ion-row>
       <ion-col>
         <div style="margin: 1%">
-          <ion-card style="padding-left: 10%">
+          <ion-card class="content" style="padding-left: 10%">
             <ion-list style="color: black">
-              <ion-row style="text-decoration: solid"
-                ><h1>Project CDCS</h1></ion-row
-              >
+              <ion-row><h1 style="font-weight: bold">Project CDCS</h1></ion-row>
               <ion-row><h2>Use of this project</h2></ion-row>
               <ion-row
                 ><p>
