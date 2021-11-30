@@ -99,13 +99,13 @@ export class AuthService {
     return this.dataRef;
   }
 
-  getAllUsers(){
+  getAllUsers() {
     return this.afs.collection('user').snapshotChanges();
   }
-  updateUser(userid, data){
+  updateUser(userid, data) {
     this.afs.doc('user/' + userid).update(data);
   }
-  deleteUser(user_id){
+  deleteUser(user_id) {
     this.afs.doc('user/' + user_id).delete();
   }
 }
