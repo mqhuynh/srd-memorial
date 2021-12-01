@@ -1,6 +1,5 @@
-import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import {ToastController } from '@ionic/angular';
+import { ToastController } from '@ionic/angular';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -9,39 +8,26 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  email:string;
-  password:string;
+  email: string;
+  password: string;
 
-  constructor(
-    private auth:AuthService,
-    private toastr:ToastController,
-    private router:Router
-  ) { }
+  constructor(private auth: AuthService, private toastr: ToastController) {}
 
-  ngOnInit() {
-  }
-  login()
-  {
-    if(this.email,this.password)
-    {
-      this.auth.SignIn(this.email,this.password);
-    }else{
-      this.toast('please enter correct email & password','warning');
+  ngOnInit() {}
+  login() {
+    if ((this.email, this.password)) {
+      this.auth.SignIn(this.email, this.password);
+    } else {
+      this.toast('please enter correct email & password', 'warning');
     }
-    
   }
-  forget(){
-    this.router.navigate(['/forget-password']);
-  }//end of forget password
-  
-  async toast(message,status){
-    const toast =await this.toastr.create({
-      message:message,
+  async toast(message, status) {
+    const toast = await this.toastr.create({
+      message: message,
       color: status,
       position: 'top',
-      duration:2000
+      duration: 2000,
     });
     toast.present();
   }
-
 }
