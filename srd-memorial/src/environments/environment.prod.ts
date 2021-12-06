@@ -1,12 +1,12 @@
 export const environment = {
   production: true,
-  firebaseConfig : {
-    apiKey: "AIzaSyBVWsh-LPAWRajEuT1a-sExOeaCWsC_XpM",
-    authDomain: "ionic-61749.firebaseapp.com",
-    projectId: "ionic-61749",
-    storageBucket: "ionic-61749.appspot.com",
-    messagingSenderId: "386091122913",
-    appId: "1:386091122913:web:116cba33ec2c724ed337a0",
-    measurementId: "G-1Y6F3N9RGS"
+  firebaseConfig: {
+    apiKey: "AIzaSyCTlyBSwoPRz2cV_W-U_pf_qu5u7OZMIfU",
+    authDomain: "srd-memorial.firebaseapp.com",
+    projectId: "srd-memorial",
+    storageBucket: "srd-memorial.appspot.com",
+    messagingSenderId: "269448145734",
+    appId: "1:269448145734:web:bdbc219a2aae1d28855347",
+    measurementId: "G-ER09K3X510"
   }
 };

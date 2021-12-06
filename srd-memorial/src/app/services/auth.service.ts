@@ -17,7 +17,7 @@ import { Veteran } from '../models/veteran';
   providedIn: 'root',
 })
 export class AuthService {
-  private dbPath = '1iv5ISsR1a7ujFLtiCsyKR8MYVsFqKB9PC99JTE1iLFs/Sheet1';
+  private dbPath = '/';
   dataRef: AngularFireList<Veteran[]> = null;
   user$: Observable<User>;
   user: User;
